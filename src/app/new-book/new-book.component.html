@@ -1,0 +1,11 @@
+<h2>Book " "</h2>
+<div>
+Title:<input name="TITLE:" [(ngModel)]="title" value="title:">
+</div>
+<div>
+Description<textarea name="DESCRIPTION:" rows="3" [(ngModel)]="description" placeholder="Description"></textarea>
+</div>
+<div>
+  <button (click)="cancel()">Cancel</button>
+	<button (click)="save()">Save</button>
+</div>
