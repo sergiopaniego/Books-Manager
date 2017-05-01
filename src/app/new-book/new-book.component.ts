@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { BookService } from './../services/book.service';
+import { Book } from '../models/book.model';
+
 
 
 @Component({
@@ -8,18 +11,27 @@ import { Router } from '@angular/router';
   styleUrls: ['./new-book.component.css']
 })
 export class NewBookComponent implements OnInit {
-  private title: string;
-  private description: string;
+  book: Book;
 
-  constructor(private router: Router) {
 
+  constructor(private router: Router, private service: BookService) {
   }
 
   ngOnInit() {
+    this.book = {
+      title: '',
+      description: '',
+    };
   }
 
   save() {
-
+    this.service.addBook(this.book).subscribe(
+        book => {
+          this.book = book;
+          this.router.navigate(['/']);
+        },
+        error => console.log(error)
+      );
   }
 
   cancel() {

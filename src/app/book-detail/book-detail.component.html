@@ -1,9 +1,6 @@
-<h2>Book " "</h2>
+<h2 *ngIf="book">Book "{{book.title}}"</h2>
 <div>
- <p>Title: {{title}}</p>
-</div>
-<div>
-Description:<p>{{description}}</p>
+Description:<p *ngIf="book">{{book.description}}</p>
 </div>
 <div>
   <button (click)="remove()">Remove</button>

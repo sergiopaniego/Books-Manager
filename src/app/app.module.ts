@@ -1,3 +1,4 @@
+import { BookService } from './services/book.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -24,7 +25,7 @@ import { EditBookComponent } from './edit-book/edit-book.component';
     HttpModule,
     routing
   ],
-  providers: [],
+  providers: [BookService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

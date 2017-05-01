@@ -1,9 +1,9 @@
 <h2>Book " "</h2>
 <div>
-Title:<input name="TITLE:" [(ngModel)]="title" value="title:">
+Title:<input name="TITLE:" [(ngModel)]="book.title" value="title:">
 </div>
 <div>
-Description<textarea name="DESCRIPTION:" rows="3" [(ngModel)]="description" placeholder="Description"></textarea>
+Description<textarea name="DESCRIPTION:" rows="3" [(ngModel)]="book.description" placeholder="Description"></textarea>
 </div>
 <div>
   <button (click)="cancel()">Cancel</button>
