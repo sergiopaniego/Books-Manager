@@ -1,7 +1,10 @@
-<h2>Books</h2>
-<ul *ngFor="let book of books">
-	<li><a [routerLink]="['/books/'+book.id]"><p style="font-weight: bold;">{{book.title}}</p></a></li>
-</ul>
+<h2 class="primary-color">Books</h2>
+<md-list  *ngFor="let book of books">
+	<md-list-item>
+		<md-icon md-list-icon>book</md-icon>
+		<a [routerLink]="['/books/'+book.id]"><p style="font-weight: bold;">{{book.title}}</p></a>
+	</md-list-item>
+</md-list>
 <div>
-	<button (click)="goTo('new')">New Book</button>
+	<button md-raised-button color="accent" (click)="goTo('new')">New Book</button>
 </div>

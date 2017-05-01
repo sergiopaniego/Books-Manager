@@ -1,11 +1,10 @@
-<h2 *ngIf="book">Book "{{book.title}}"</h2>
+<h2 class="primary-color" *ngIf="book">Book {{book.title}}</h2>
 <div>
 Description:<p *ngIf="book">{{book.description}}</p>
 </div>
 <div>
-  <button (click)="remove()">Remove</button>
-	<button (click)="edit()">Edit</button>
+  <button md-raised-button color="accent" (click)="remove()">Remove</button>
+	<button md-raised-button color="accent" (click)="edit()">Edit</button>
+  <button md-raised-button color="accent" (click)="back()">Back</button>
 </div>
-<div>
-  <button (click)="back()">Back</button>
-</div>
+
