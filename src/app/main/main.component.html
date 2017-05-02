@@ -5,6 +5,9 @@
 		<a [routerLink]="['/books/'+book.id]"><p style="font-weight: bold;">{{book.title}}</p></a>
 	</md-list-item>
 </md-list>
-<div>
-	<button md-raised-button color="accent" (click)="goTo('new')">New Book</button>
+<div class="light-primary-background-color">
+	<button md-raised-button color="accent" (click)="goTo()">
+		<md-icon md-list-icon>add</md-icon>
+		New Book
+		</button>
 </div>

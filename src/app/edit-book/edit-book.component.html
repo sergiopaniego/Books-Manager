@@ -1,18 +1,26 @@
-<h2 class="primary-color">Book</h2>
+<h2 *ngIf="book" class="primary-color">Book {{book.title}}</h2>
 <p *ngIf="book">ID: {{book.id}}</p>
 <div>
 <md-input-container *ngIf="book">
+  <md-icon md-list-icon>description</md-icon>
   <label>Title</label>
   <input mdInput name="TITLE:" [(ngModel)]="book.title" value="title:">
 </md-input-container>
 </div>
 <div>
 <md-input-container *ngIf="book">
+  <md-icon md-list-icon>description</md-icon>
   <label>Description</label>
   <textarea mdInput name="DESCRIPTION:" rows="3" [(ngModel)]="book.description" placeholder="Description"></textarea>
 </md-input-container>
 </div>
-<div>
-  <button md-raised-button color="accent" (click)="cancel()">Cancel</button>
-	<button md-raised-button color="accent" (click)="save()">Save</button>
+<div class="light-primary-background-color">
+  <button md-raised-button color="accent" (click)="cancel()">
+    <md-icon md-list-icon>keyboard_arrow_left</md-icon>
+    Cancel
+    </button>
+	<button md-raised-button color="accent" (click)="save()">
+    <md-icon md-list-icon>save</md-icon>
+    Save
+    </button>
 </div>

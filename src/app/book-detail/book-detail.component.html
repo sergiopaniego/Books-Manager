@@ -2,9 +2,18 @@
 <div>
 Description:<p *ngIf="book">{{book.description}}</p>
 </div>
-<div>
-  <button md-raised-button color="accent" (click)="remove()">Remove</button>
-	<button md-raised-button color="accent" (click)="edit()">Edit</button>
-  <button md-raised-button color="accent" (click)="back()">Back</button>
+<div class="light-primary-background-color">
+  <button md-raised-button color="accent" (click)="remove()">
+    <md-icon md-list-icon>delete</md-icon>
+    Remove
+    </button>
+	<button md-raised-button color="accent" (click)="edit()">
+    <md-icon md-list-icon>mode_edit</md-icon>
+    Edit
+    </button>
+  <button md-raised-button color="accent" (click)="back()">
+    <md-icon md-list-icon>keyboard_arrow_left</md-icon>
+    Back
+    </button>
 </div>
 

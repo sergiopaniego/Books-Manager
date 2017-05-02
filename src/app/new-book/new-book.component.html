@@ -8,10 +8,17 @@
 <div>
 <md-input-container>
   <label>Description</label>
+  <md-icon md-list-icon>description</md-icon>
   <textarea mdInput name="DESCRIPTION:" rows="3" [(ngModel)]="book.description" placeholder="Description"></textarea>
 </md-input-container>
 </div>
-<div>
-  <button md-raised-button color="accent" (click)="cancel()">Cancel</button>
-	<button md-raised-button color="accent" (click)="save()">Save</button>
+<div class="light-primary-background-color">
+  <button md-raised-button color="accent" (click)="cancel()">
+    <md-icon md-list-icon>keyboard_arrow_left</md-icon>
+    Cancel
+    </button>
+	<button md-raised-button color="accent" (click)="save()">
+    <md-icon md-list-icon>save</md-icon>
+    Save
+    </button>
 </div>
